@@ -1,0 +1,48 @@
+<div class="check">
+    <p> Get one checkbox and Add and remove div content based on checkbox selected value </p>
+   <!-- <input type="checkbox" id="ch" (click)="isShowContent()"> -->
+   <input type="checkbox" id="ch" [(ngModel)]="isShow">
+    <label for="ch"> Click on the checkbox to display the content</label>
+    </div>
+    <div *ngIf="isShow"> {{text}} </div>
+
+    <h4> Top 3 Courses </h4>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> Sr. No.</th>
+                    <th> Name of the Course </th>
+                    <th> Technologies used</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let course of courses">
+                    <td> {{course.srNo}} </td>
+                    <td> {{course.courseName}} </td>
+                    <td> {{course.technologyStack}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <select class="form-control" (change)="getIndustryValue($event)"> 
+                <option value="Default"> Select the Industry</option>
+                <option value="Automobile"> Automobile </option>
+                <option value="Textile"> Textile </option>
+                <option value="IT"> Information Technology </option>
+                <option value="FMCG"> FMCG </option>
+            </select>
+        </div>
+        <div class="col-md-12" [ngSwitch]="selectedIndustry">
+        <h3 *ngSwitchDefault> Select the Industry </h3>
+        <h3 *ngSwitchCase="'Automobile'"> Automobile </h3>
+        <h3 *ngSwitchCase="'Textile'">Textile </h3>
+        <h3 *ngSwitchCase="'IT'"> Information Technology </h3>
+        <h3 *ngSwitchCase="'FMCG'"> FMCG </h3>
+    </div>
+</div>
+</div>
+

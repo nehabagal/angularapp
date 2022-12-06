@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
+import { AssignStructDirectiveComponent } from './assign-struct-directive/assign-struct-directive.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
     SuccessAlertComponent,
     DataBindingComponent,
     DirectivesComponent,
-    NgswitchComponent
+    NgswitchComponent,
+    AssignStructDirectiveComponent
   ],
   imports: [
     BrowserModule,
