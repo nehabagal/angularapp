@@ -12,6 +12,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { AssignStructDirectiveComponent } from './assign-struct-directive/assign-struct-directive.component';
+import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
+import { CustomDirectiveDirective } from './custom-directive.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AssignStructDirectiveComponent } from './assign-struct-directive/assign
     DataBindingComponent,
     DirectivesComponent,
     NgswitchComponent,
-    AssignStructDirectiveComponent
+    AssignStructDirectiveComponent,
+    AttributeDirectiveComponent,
+    CustomDirectiveDirective
   ],
   imports: [
     BrowserModule,

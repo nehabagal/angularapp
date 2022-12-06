@@ -1,0 +1,16 @@
+<!-- <div [ngStyle]="{'color':'red'}"> passing hard coded value to ngStyle-->
+    <div [ngStyle]="{'color': colorVal, 'background-color':'yellow'}">   <!--dynamically passing value to ngStyle using variable-->
+    Learning Angular 8!!!!!
+</div>
+<h4>Ng Class</h4>
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+        'text-success': person.country === 'UK',
+'text-primary': person.country === 'USA',
+'text-danger': person.country === 'HK'
+}"> 
+{{person.name}} ({{person.country}}) </li>
+</ul>
+<p> Normal Para</p>
+<p appCustomDirective> Custom Para</p>
+<div appCustomDirective></div>
