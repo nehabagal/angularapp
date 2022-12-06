@@ -9,6 +9,8 @@ import { WarningComponent } from './warningAlert/warningAlert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { FormsModule } from '@angular/forms';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { NgswitchComponent } from './ngswitch/ngswitch.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     ServersComponent,
     WarningComponent,
     SuccessAlertComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    DirectivesComponent,
+    NgswitchComponent
   ],
   imports: [
     BrowserModule,
