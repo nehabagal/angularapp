@@ -9,8 +9,10 @@
     </li>
 </ol>
 {{userName}}
-
-    
+<!--Template Reference Variable-->
+<input type="text" #uuserName>    <!--Two way data binding using template reference variable-->
+<button (click)="show(uuserName.value)"> Click </button>   
+{{uname}} 
        
                
  
