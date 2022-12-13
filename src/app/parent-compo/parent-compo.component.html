@@ -1,0 +1,17 @@
+<!--<p>parent-compo works!</p>
+<input type="text" #uuserName>    
+<div>
+    <button (click)="show(uuserName.value)"> Click </button>
+</div>
+   <div>
+    {{uname}}
+   </div>
+   -->
+  <div *ngFor="let e of employeeRecords">
+    
+    <app-child-compo [employeeName]="e.eName"></app-child-compo>
+  </div>
+  
+  
+ 
+

@@ -14,6 +14,10 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { AssignStructDirectiveComponent } from './assign-struct-directive/assign-struct-directive.component';
 import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
 import { CustomDirectiveDirective } from './custom-directive.directive';
+import { ParentCompoComponent } from './parent-compo/parent-compo.component';
+import { ChildCompoComponent } from './child-compo/child-compo.component';
+import { SimpleFormComponent } from './simple-form/simple-form.component';
+import { AssignTemplteFormComponent } from './assign-templte-form/assign-templte-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { CustomDirectiveDirective } from './custom-directive.directive';
     NgswitchComponent,
     AssignStructDirectiveComponent,
     AttributeDirectiveComponent,
-    CustomDirectiveDirective
+    CustomDirectiveDirective,
+    ParentCompoComponent,
+    ChildCompoComponent,
+    SimpleFormComponent,
+    AssignTemplteFormComponent
   ],
   imports: [
     BrowserModule,
