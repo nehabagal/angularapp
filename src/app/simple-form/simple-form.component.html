@@ -3,7 +3,8 @@
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-5">
             <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
-                <div class="form-group">
+                <div ngModelGroup="userDetails" #userDetails="ngModelGroup">
+             <div class="form-group">
                     <label for="username">User Name</label>
                     <input type="text" class="form-control" id="username" required name="username" placeholder="Enter user name" [(ngModel)]="username">
                     <small *ngIf="username"> User Name is: {{username}} </small>                
@@ -11,10 +12,11 @@
                                 
                 <div class="form-group">
                   <label for="email">Email address</label>
-                  <input type="email" class="form-control" id="email" #email="ngModel" email name="email" required placeholder="Enter email" ngModel>
+                  <input type="email" class="form-control" id="email" #email="ngModel" email name="email" required placeholder="Enter email" ngModel>                 
                  <small class="text-danger" *ngIf="!email.valid && email.touched"> Enter Valid Email</small>
                 </div>
-                
+                <small *ngIf="!userDetails.valid && userDetails.touched">Please Enter Valid Details</small>
+            </div>
 
                 <div class="form-group">
                     <label for="course">Select Course</label>
@@ -32,6 +34,14 @@
                 </div>
                
                 <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+                <div class="row justify-content-center mt-2" *ngIf="submitted">
+                    <div class="col-md-6 rounded shadow py-4">
+                    <h2>Form data</h2><p>Username: <strong>{{employeee.username}}</strong></p>
+                    <p>Email: <strong>{{employeee.email}}</strong></p>
+                    <p>Course: <strong>{{employeee.course}}</strong></p>
+                    <p>Gender: <strong>{{employeee.gender}}</strong></p>
+                </div>
+            </div>      
               </form>
         </div>
     </div>

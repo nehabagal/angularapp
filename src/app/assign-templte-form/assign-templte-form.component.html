@@ -1,100 +1,40 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-5">
-            <h3> Savitribai Phule Pune University</h3>
-            <br>
-            <h5> Student Registration Form</h5>
-          
-                <div class="form-group" class="mb-3 row">
-                    <label for="name" class="col-sm-2 col-form-label">Name:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name" ngModel>
-                    </div>
+            <form (ngSubmit)="onSubmit(mySampleForm)" #mySampleForm="ngForm">
+                <div class="form-group">
+                    <label for="username">User Name</label>
+                    <input type="text" class="form-control" name="username" required id="username" placeholder="Enter User name"
+                        [(ngModel)]="username">
+                        <small *ngIf="username"> user name is {{username}} </small>
                 </div>
-                <div class="form-group" class="mb-3 row">
-                    <label for="dob" class="col-sm-2 col-form-label">DOB:</label>
-                    <div class="col-sm-10">
-                        <input type="date" class="form-control" id="dob" ngModel>
-                    </div>
+                <div class="form-group">
+                    <label for="email">Enter Email Address</label>
+                    <input type="text" class="form-control" #email="ngModel" email name="email" id="email" required placeholder="Enter Email" ngModel>
+                    <small *ngIf="!email.valid && email.touched"> Enter Valid Email</small>
                 </div>
-                <div class="form-group" style="display: inline;">
-                    <label for="sex" class="col-sm-4 col-form-label">Sex:</label>
-
+                <div class="form-group">
+                    <label for="course"> Select the Course</label>
+                    <select class="form-control" name="course" id="course" [ngModel]="defaultValue">
+                        <option value="angular">Angular</option>
+                        <option value="HTML"> HTML</option>
+                        <option value="javascript">JavaScript</option>
+                    </select>
                 </div>
-                <div class="form-group" class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sex" id="male" value="male" ngModel>
-                    <label class="form-check-label" for="male">Male</label>
+                <div>
+              <!--  <input type="date" min="2022-12-14">  disable past date by using min property (static)
+              <input type="date" min="{{minDate}}"> disable past date by using string interpolation and min property(static)-->
+              <input type="date" min="{{minDate}}"> <!--disable past date dynamically using custom validation-->
+            </div>
+                <button class="btn btn-success"> Submit </button>
+                <div class="row justify-content-center mt-2" *ngIf="submit">
+                    <div class="col-md-6 rounded shadow py-4">
+                    <h2>Form data</h2><p>Username: <strong> {{student.username}} </strong></p>
+                    <p>Email: <strong> {{student.email}}  </strong></p>
+                    <p>Course: <strong> {{student.course}}  </strong></p>
                 </div>
-                <div class="form-group" class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sex" id="female" value="female" ngModel>
-                    <label class="form-check-label" for="female">Female</label>
-                </div>
-                <div class="form-group" class="mb-3 row">
-                    <label for="email" class="col-sm-2 col-form-label">Email:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="email" ngModel>
-                    </div>
-                </div>
-                <div class="form-group" class="mb-3 row">
-                    <label for="address" class="col-sm-2 col-form-label">Address:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="address" ngModel>
-                    </div>
-                    <div class="form-group" class="col-12">
-                        <label for="school" class="col-sm-2 col-form-label">School:</label>
-                    </div>
-                    <div>
-                        <div class="col-12" class="form-group">
-                            <select class="form-select" name="school" id="School" ngModel>
-                                <option value="default">Select School</option>
-                                <option value="DAV">DAV</option>
-                                <option value="Podar">Podar</option>
-                                <option value="NPS">National Public School</option>
-                            </select>
-                        </div>
-
-                    </div>
-                    <div class="col-12" class="form-group">
-                        <label for="department" class="col-sm-2 col-form-label">Department:</label>
-                    </div>
-                    <div>
-                        <div class="col-12" class="form-group">
-                            <select class="form-select" name="department" id="department" ngModel>
-                                <option value="default">Select Department</option>
-                                <option value="entc">E & TC</option>
-                                <option value="IT">Information Technology</option>
-                                <option value="CS">Computer Science</option>
-                                <option value="civil">Civil</option>
-                                <option value="Mechanical">Mechanical</option>
-
-                            </select>
-                        </div>
-
-                    </div>
-                    <div class="col-12" class="form-group">
-                        <label for="course" class="col-sm-2 col-form-label">Course:</label>
-                    </div>
-                    <div>
-                        <div class="col-12">
-                            <select class="form-select" name="course" id="course" ngModel>
-                                <option value="default">Select Course</option>
-                                <option value="be">BE</option>
-                                <option value="me">ME</option>
-                                <option value="Phd">Ph.D</option>
-                            </select>
-                        </div>
-
-                    </div>
-                    <div class="mb-3 row" class="form-group">
-                        <label for="mobile" class="col-sm-2 col-form-label">Mobile:</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" id="mobile" ngModel>
-                        </div>
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <button type="reset" class="btn btn-primary">Reset</button>
-                    </div>
-              </div>
+            </div>      
+            </form>
+        </div>
     </div>
 </div>

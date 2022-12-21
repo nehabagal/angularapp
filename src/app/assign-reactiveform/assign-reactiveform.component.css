@@ -1,0 +1,9 @@
+input.ng-invalid.ng-touched{
+    border: solid red 1px;
+    box-shadow: 0 0 5px black;
+}
+*{
+    background-image:url("src\assets\images\pngtree-scene-with-geometrical-forms-the-poster-model-minimal-background-render-image_437743.jpg");
+   background-size: cover;
+}
+

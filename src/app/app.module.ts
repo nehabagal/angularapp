@@ -7,7 +7,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningComponent } from './warningAlert/warningAlert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
@@ -18,6 +18,8 @@ import { ParentCompoComponent } from './parent-compo/parent-compo.component';
 import { ChildCompoComponent } from './child-compo/child-compo.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { AssignTemplteFormComponent } from './assign-templte-form/assign-templte-form.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { AssignReactiveformComponent } from './assign-reactiveform/assign-reactiveform.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +37,15 @@ import { AssignTemplteFormComponent } from './assign-templte-form/assign-templte
     ParentCompoComponent,
     ChildCompoComponent,
     SimpleFormComponent,
-    AssignTemplteFormComponent
+    AssignTemplteFormComponent,
+    ReactiveFormsComponent,
+    AssignReactiveformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
