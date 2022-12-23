@@ -20,6 +20,13 @@ import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { AssignTemplteFormComponent } from './assign-templte-form/assign-templte-form.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { AssignReactiveformComponent } from './assign-reactiveform/assign-reactiveform.component';
+import { PipedemoComponent } from './pipedemo/pipedemo.component';
+import { CountPipe } from './count.pipe';
+import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
+import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
+import { HttpClientModule} from '@angular/common/http';
+import { FilterpipeComponent } from './filterpipe/filterpipe.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -39,13 +46,20 @@ import { AssignReactiveformComponent } from './assign-reactiveform/assign-reacti
     SimpleFormComponent,
     AssignTemplteFormComponent,
     ReactiveFormsComponent,
-    AssignReactiveformComponent
+    AssignReactiveformComponent,
+    PipedemoComponent,
+    CountPipe,
+    Servicecomp1Component,
+    Servicecomp2Component,
+    FilterpipeComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

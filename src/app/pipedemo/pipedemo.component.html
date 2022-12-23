@@ -1,0 +1,44 @@
+<p>pipedemo works!</p>
+<div>
+    Today's Date: {{todayDate}}
+</div>
+<div>
+    Today's Date: {{todayDate | date}}
+    <br>
+    Today's Date: {{todayDate | date:'mm/dd/yyyy'}}
+    <br>
+    Today's Date: {{todayDate | date:'fullDate' | uppercase}}  <!--Chained Pipes-->
+</div>
+<div>
+    Today's Date: {{todayDate | date:'shortDate'}}
+    <br>
+    <div>
+        Today's Date: {{todayDate | date:'dd/mm/yyyy'}}
+    </div>
+</div>
+<br>
+<div>
+    Decimal Pipe:
+    {{myNum | number}}
+</div>
+<br>
+<div>
+    Currency Pipe:
+    <div>
+        {{price | currency:'INR'}} <br>
+        {{price | currency:'DLR'}} <br>
+        {{price | currency:'EUR'}}
+    </div>
+    <br>
+    <div>
+        <p>Finding length using Custom Pipe</p>
+        {{name}} {{name | count}}
+        <br>
+        {{price}} {{price | count}}
+    </div>
+</div>
+<div>
+    JSON Pipe:
+    <br>
+    {{obj | json}}
+</div>

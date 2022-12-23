@@ -1,0 +1,5 @@
+table, tr,th, td{
+    border: solid;
+    border-color: black;
+    background-color: azure;
+}

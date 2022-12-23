@@ -14,9 +14,44 @@
     <app-simple-form></app-simple-form> 
      
     <app-assign-templte-form></app-assign-templte-form> 
-    <app-reactive-forms></app-reactive-forms> -->
-     <app-assign-reactiveform></app-assign-reactiveform>
+     
+    <app-assign-reactiveform></app-assign-reactiveform>  
+    <app-pipedemo></app-pipedemo>
+    <app-pipedemo></app-pipedemo>
+  <app-reactive-forms></app-reactive-forms>
     
+    <app-servicecomp1></app-servicecomp1>
+    <app-servicecomp2></app-servicecomp2>
+    <div>
+      <table class="table">
+        <thead>
+            <tr>
+                <th> ID </th>
+                <th> Name </th>
+                <th> Username</th>
+                <th> Email </th>
+                <th> Address </th>
+                <th> Phone </th>
+                <th> Company </th>
+                <th> Website </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of data1">
+                <td> {{d.id}} </td>
+                <td> {{d.name}} </td>
+                <td> {{d.username}} </td>
+                <td> {{d.email}} </td>
+                <td> Suite: {{d.address.suite}} , Street: {{d.address.street}}, City: {{d.address.city}}, ZipCode: {{d.address.zipcode}}, Geo: lat: {{d.address.geo.lat}}, lng: {{d.address.geo.lng}} </td>
+                <td> {{d.phone}} </td>
+                <td> name: {{d.company.name}}, CatchPhrase: {{d.company.catchPhrase}}, BS: {{d.company.bs}} </td>
+                <td> {{d.website}} </td>
+            </tr>
+        </tbody>
+            </table>
+    </div> -->
+ 
+<app-filterpipe></app-filterpipe>
   <!-- <app-servers></app-servers> 
    <app-server></app-server> 
     -->
