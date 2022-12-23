@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 
@@ -22,7 +22,7 @@ export class ReactiveFormsComponent implements OnInit {
     }
   ]
   myReactiveForm: FormGroup;
-  constructor(private: _fb) { 
+  constructor(private _fb: FormBuilder) { 
     this.createForm();
   }
 
@@ -61,7 +61,7 @@ export class ReactiveFormsComponent implements OnInit {
        new FormControl(null, Validators.required)
       ])
     })*/
-    this.myReactiveForm = this._fb.group({
+   this.myReactiveForm = this._fb.group({
       userDetails: this._fb.group({
         username: ['', Validators.required],
         email: ['', Validators.required]
@@ -84,6 +84,7 @@ export class ReactiveFormsComponent implements OnInit {
   OnAddSkills() {
    (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl(null, Validators.required));
   }
+  
   NaNames(control:FormControl)
   {  
     //  this.notAllowedNames=   api/getNams 
