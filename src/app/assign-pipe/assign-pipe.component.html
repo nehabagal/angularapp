@@ -1,0 +1,27 @@
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <strong> Adding prefix Mr or Miss to name based on gender of employee</strong>
+<table class="table">
+<thead>
+    <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th> Gender</th>
+        <th> Date of Birth </th>
+        <th> Company</th>
+        <th> Salary</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let p of person">
+<td> {{p.id}} </td>
+<td> {{p.name | prefix:p.gender}} </td>
+<td> {{p.gender}} </td>
+<td> {{p.dob}} </td>
+<td> {{p.company}} </td>
+<td> {{p.sal}} </td>
+    </tr>
+</tbody>
+</table>
+    </div>
+</div>
