@@ -27,6 +27,18 @@ import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 import { HttpClientModule} from '@angular/common/http';
 import { FilterpipeComponent } from './filterpipe/filterpipe.component';
 import { FilterPipe } from './filter.pipe';
+import { AssignPipeComponent } from './assign-pipe/assign-pipe.component';
+import { PrefixPipe } from './prefix.pipe';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ProductComponent } from './product/product.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { Emp2Component } from './emp2/emp2.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +64,19 @@ import { FilterPipe } from './filter.pipe';
     Servicecomp1Component,
     Servicecomp2Component,
     FilterpipeComponent,
-    FilterPipe
+    FilterPipe,
+    AssignPipeComponent,
+    PrefixPipe,
+    AboutusComponent,
+    ContactusComponent,
+    ProductComponent,
+    HomeComponent,
+    LoginComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
+    Emp2Component
   ],
   imports: [
     BrowserModule,

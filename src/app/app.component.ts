@@ -13,7 +13,9 @@ export class AppComponent implements OnInit{
  }
  
  ngOnInit(): void {this._demoService.getUsersData().subscribe(data => {console.log('getting data from api', data);
-this.data1=data})}
+ this.data1=data})
+this._demoService.getPosts().subscribe(result=>{console.log('posts',result)})
+}
  
   title = 'angularapp';
 }
