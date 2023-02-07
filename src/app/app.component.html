@@ -71,22 +71,28 @@
   </li>
 </ul>
 -->
-
+<!-- 
 <app-comp1></app-comp1>
 <app-comp2></app-comp2>
 <app-comp3></app-comp3>
-<app-comp4></app-comp4>
+<app-comp4></app-comp4> -->
+<!-- <app-demopost></app-demopost> -->
 
 <header>
   <nav>
     <ul class="nav nav-tabs">
       <li class="nav-item"> <a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/"> Home</a> </li>
-      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="aboutus"> About us</a> </li>
-      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="product"> Product</a> </li>
-      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="contactus"> Contact us</a> </li>
+      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="aboutus/"> About us</a> </li>
+      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="product/"> Product</a> </li>
+      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="contactus/"> Contact us</a> </li>
+      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="clothing/"> Clothing</a> </li>
+      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="post/"> Post</a> </li>
+      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="orders/"> Orders  </a></li>
+      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="adduser/"> Add User  </a></li>
     </ul>
   </nav>
 </header>
-<router-outlet></router-outlet>
 
+<router-outlet></router-outlet>
+<button (click)="DeletePost()">Delete Post</button>
 

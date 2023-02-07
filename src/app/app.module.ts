@@ -13,7 +13,6 @@ import { DirectivesComponent } from './directives/directives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { AssignStructDirectiveComponent } from './assign-struct-directive/assign-struct-directive.component';
 import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
-import { CustomDirectiveDirective } from './custom-directive.directive';
 import { ParentCompoComponent } from './parent-compo/parent-compo.component';
 import { ChildCompoComponent } from './child-compo/child-compo.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
@@ -31,7 +30,6 @@ import { AssignPipeComponent } from './assign-pipe/assign-pipe.component';
 import { PrefixPipe } from './prefix.pipe';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { Comp1Component } from './comp1/comp1.component';
@@ -39,6 +37,15 @@ import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
 import { Emp2Component } from './emp2/emp2.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ClothingComponent } from './clothing/clothing.component';
+import { MenclothingComponent } from './clothing/menclothing/menclothing.component';
+import { WomenclothingComponent } from './clothing/womenclothing/womenclothing.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { UtilityModule } from './models/utility.module';
+import { AdduserComponent } from './adduser/adduser.component';
+
 
 @NgModule({
   declarations: [
@@ -52,7 +59,6 @@ import { Emp2Component } from './emp2/emp2.component';
     NgswitchComponent,
     AssignStructDirectiveComponent,
     AttributeDirectiveComponent,
-    CustomDirectiveDirective,
     ParentCompoComponent,
     ChildCompoComponent,
     SimpleFormComponent,
@@ -69,23 +75,35 @@ import { Emp2Component } from './emp2/emp2.component';
     PrefixPipe,
     AboutusComponent,
     ContactusComponent,
-    ProductComponent,
     HomeComponent,
     LoginComponent,
     Comp1Component,
     Comp2Component,
     Comp3Component,
     Comp4Component,
-    Emp2Component
+    Emp2Component,
+    PagenotfoundComponent,
+    ClothingComponent,
+    MenclothingComponent,
+    WomenclothingComponent,
+    DemopostComponent,
+    PostdetailsComponent,
+    AdduserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    UtilityModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    console.log("App Module Called");
+    
+  }
+ }
